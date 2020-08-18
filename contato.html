@@ -27,17 +27,22 @@
             <h3 class="center">Fale comigo!</h3>
             <form>
                 <label for="nome">Nome:</label> <br>
-                <textarea name="text" id="nome" cols="30" rows="2"></textarea>
-                <br>
+                <textarea name="text" id="nome" onkeyup="validaNome()" cols="30" rows="2"></textarea>
+                <div id="txtNome"></div>
+    
                 <label for="email">E-mail:</label> <br>
-                <textarea name="email" id="email" cols="30" rows="2"></textarea>
-                <br>
-                <label for="serie">Série:</label> <br>
-                <textarea name="serie" id="serie" cols="60" rows="5"></textarea>
-                <br>
-                <button >Enviar</button>
+                <textarea name="email" id="email" onkeyup="validaEmail()" cols="30" rows="2"></textarea>
+                <div id="txtEmail"></div>
+            
+                <label for="serie">Fale sobre a série:</label> <br>
+                <textarea name="serie" id="serie" onkeyup="validaSerie()" cols="60" rows="5"></textarea>
+                <div id="txtSerie"></div>
+
+                <button onclick ="enviaFormulario()">Enviar</button>
+                <div id="txtEnvia"></div>
             </form>
         </div>
+
         <div class="ml-50">
             <h3 class="center">Endereço</h3>
             <p>Av. das Nações Unidas, 8501 - Pinheiros</p>
@@ -64,6 +69,8 @@
             Todos os direitos reservados: Camila das Mercês &copy
         </p>
     </footer>
+    
+    <script src="assets/js/script.js"></script>
 
 </body>
 </html>
